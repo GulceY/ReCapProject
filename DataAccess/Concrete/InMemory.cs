@@ -16,8 +16,8 @@ namespace DataAccess.Concrete
                 new Car{BrandId=1, CarId=13, ColorId=2, DailyPrice=200, ModelYear=2008, Description="Benzin,Manuel"},
                 new Car{BrandId=2, CarId=14, ColorId=2, DailyPrice=1000, ModelYear=2019, Description="Dizel,Otomatik"},
                 new Car{BrandId=2, CarId=15, ColorId=2, DailyPrice=1200, ModelYear=2020, Description="Dizel,Otomatik"},
-                new Car{BrandId=4, CarId=16, ColorId=2, DailyPrice=500, ModelYear=2018, Description="Dizel,Manuel"},
-                new Car{BrandId=3, CarId=17, ColorId=2, DailyPrice=250, ModelYear=2014, Description="Benzin,Manuel"}
+                new Car{BrandId=3, CarId=16, ColorId=2, DailyPrice=500, ModelYear=2018, Description="Dizel,Manuel"},
+                new Car{BrandId=4, CarId=17, ColorId=2, DailyPrice=250, ModelYear=2014, Description="Benzin,Manuel"}
 
             };
         }
