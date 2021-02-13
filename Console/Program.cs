@@ -12,10 +12,11 @@ namespace Console
         static void Main(string[] args)
         {
             CarManager cars = new CarManager(new EfCarDal());
-            foreach (var car in cars.GetCarsByBrandId(3))
+            foreach (var car in cars.GetCarDeteils())
             {
-                System.Console.WriteLine(car.CarId);
+                System.Console.WriteLine(car.CarId+"/"+car.BrandName+"/"+car.ColorName);
             }
+
 
 
 

@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities_.Concrete;
+using Entities_.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Text;
 
 namespace DataAccess.Concrete
 {
-    public class InMemoryProductDal:IEntityRepository<Car>
+    public class InMemoryProductDal: ICarDal
     {
         List<Car> cars;
         public InMemoryProductDal()
@@ -53,6 +54,12 @@ namespace DataAccess.Concrete
         public List<Car> GetById(int Id)
         {
             return cars.Where(c => c.CarId == Id).ToList();
+        }
+
+       
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
