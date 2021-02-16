@@ -12,8 +12,15 @@ namespace Console
         static void Main(string[] args)
         {
             //AddCarTest();
-            CarGetDetailsTest();
+            //CarGetDetailsTest();
+            UserTest();
+        }
 
+        private static void UserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            var result = userManager.Add(new User { FirstName = "Gülce", LastName = "Yılmaz", Email = "gulceyilmaz00@gmail.com", Password = "1234GY" });
+            System.Console.WriteLine(result.Message);
         }
 
         private static void CarGetDetailsTest()
