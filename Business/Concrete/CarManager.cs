@@ -39,6 +39,13 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarDeleted);
         }
 
+        public IDataResult<List<Car>> GetAll()
+        {
+            var result = _carDal.GetAll().ToList();
+
+            return new SuccessDataResult<List<Car>>(result, Messages.CarListed);
+        }
+
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
             var result = _carDal.GetCarDetails().ToList();

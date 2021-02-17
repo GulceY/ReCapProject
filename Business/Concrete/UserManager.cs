@@ -5,6 +5,7 @@ using DataAccess.Abstract;
 using Entities_.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
@@ -18,6 +19,7 @@ namespace Business.Concrete
         }
         public Result Add(User user)
         {
+           
             _userDal.Add(user);
 
             return new SuccessResult(Messages.UserAdded);
@@ -28,6 +30,13 @@ namespace Business.Concrete
             _userDal.Delete(user);
 
             return new SuccessResult(Messages.UserDeleted);
+        }
+
+        public IDataResult<List<User>> GetAll()
+        {
+            var result =_userDal.GetAll().ToList();
+
+            return new SuccessDataResult<List<User>>(result, Messages.UserListed);
         }
     }
 }

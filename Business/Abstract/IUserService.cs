@@ -11,6 +11,7 @@ namespace Business.Abstract
        
         Result Add(User user);
         Result Delete(User user);
+        IDataResult<List<User>> GetAll();
         
     }
 }
